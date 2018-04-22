@@ -45,14 +45,18 @@
             |-------- stage files ------>|                            |
             |                            |                            |
             |                            |                            |
-            |                            |------- COMMIT ------------>|
+            |                            |---------- COMMIT --------->|
             |                            |                            |
 
 3. Schemat pracy w Git
 
-    3.1. Modyfikacja plików w katalogu roboczym.
-    3.2. Oznaczenie zmodyfikowanych pliki jako śledzone, dodając ich bieżący stan do przechowalni.
-    3.3. Dokonanie zatwierdzenia (commit), podczas którego zawartość plików z przechowalni zapisywana jest do projektu w Git Repository.
+    3.1. Ściągnięcie najbardziej aktualnej wersji zdalnego repozytorium do lokalnego (git fetch & merge)
+    3.2. Stworzenie lokalnej gałęzi pracy (git branch).
+    3.3. Modyfikacja plików w katalogu roboczym.
+    3.4. Oznaczenie zmodyfikowanych pliki jako śledzone, dodając ich bieżący stan do przechowalni (git add).
+    3.5. Dokonanie zatwierdzenia (commit), podczas którego zawartość plików z przechowalni zapisywana jest do HEAD'a.
+    3.6. Uspójnienie repozytorium (fetch & merge).
+    3.7. 'Wypchnięcie' zmian do projektu w Git Repository (GitHub) (git push).
 
 4. Instrukcja instalacji: https://gitforwindows.org
 
@@ -84,6 +88,10 @@
     (*) Aby dodać nowy lub zmodyfikowany plik do 'Staging Area' wykorzystujemy to samo polecenie: git add <file_name>
 
 7. Polecenia
+
+    LOKALNE REPOZYTORIUM
+
+    * git help <command>            - 
     * git init                      - inicjalizacja repozytorium / stworzenie pliku .git
     * git add <file_name>           -
     * git status                    -
@@ -94,7 +102,7 @@
                  -v                 - do komentarza dodawane są zmodyfikowane wiersze
                  -a                 - dodanie plików z pominięciem komendy 'git add <file_name>'
                  --amend            -
-
+    * git show HEAD                 - 
     * git rm <file_name>            - usunięcie pliku ze zbioru plików śledzonych i FIZYCZNE
     * git mv <source> <destination> - zmiana nazwy pliku w repozytorium
     * git log                       - historia git push z zewnętrznym repo (GitHub)
@@ -102,14 +110,36 @@
               -'n'                  - ogranicza listę do n ostatnich wpisów, gdzie n - unsigned int
               --stat                - skrócone statystyki każdej ze zmian
               --pretty=oneline      -
-    * git reset HEAD <file_name>    -
-    * git checkout -- <file_name>   -
-    * git clone <remote_repo>       -
-    * git remote -v                 -
-                 add <repo_name> <remote_repo>  -
-    * git fetch <remote_repo>       - uspójnienie zmian z zewnętrznym repo
+    * git branch                    - pokazuje aktualną gałęź projektu
+    * git branch <new_branch>       - nowe rozgałęzienie projektu
+    * git checkout <branch_name>    - zmiana obecnej gałęzi
+    * git merge <branch_name>       - 
+    * git branch -d <branch_name>   - usunięcie danej gałęzi
 
-n. Bibliografia
+    COFANIE ZMIAN
+
+    * git reset HEAD <file_name>    - usunięcie pliku z 'Staging Area'
+    * git reset commit_SHA          - usunięcie wszystkich zmian do danego commit'u
+    * git checkout -- <file_name>   - Uwaga! cofniecie zmian w zmodyfikowanym pliku
+    
+    ZDALNE REPOZYTORIUM (GitHub)
+
+    * git clone <remote_repo> <local_name>  - 
+    * git remote -v                         -
+    * git fetch <remote_repo>               - uspójnienie zmian z zewnętrznym repo
+    * git fetch <remote_repo>               -
+    * git pull                              - fetch + merge
+
+    * git remote add <local_repo_name> <remote_repo>    -
+    * git push <remote_repo> <branch>                   -
+    * git push -u <remote_repo> <branch>                - zapamiętuje parametry 'git push'
+
+8. Etykiety -- NIEUKOŃCZONE
+    * lekkie
+    * opisane
+    
+9. Bibliografia
     * https://git-scm.com/book/pl/
     * https://www.codecademy.com/learn/learn-git
     * https://www.codeschool.com/courses/try-git
+    * http://gitreal.codeschool.com/levels/1/
