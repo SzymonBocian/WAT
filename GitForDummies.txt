@@ -1,25 +1,26 @@
 /**
--///--- --- --- --- --- ---///-
-        Git for Dummies
+-///--- --- --- --- --- --- --- --- --- --- ---///-
+        Git for Dummies - praca z Git i GitHub'em
         for Protected Static Void
         by Szymon & Adam
         22.04.2018
         version 1.0
--///--- --- --- --- --- ---///-
+-///--- --- --- --- --- --- --- --- --- --- ---///-
 
  */
+
 0. Słownik pojęć
-    * VCS    -> Version Control System (ang. System Kontroli Wersji)
-    * CVCS    -> Centralized Version Control System (ang. Scentralizowany System Kontroli Wersji)
-    * DVCS    -> Distributed Version Control System (ang. Rozproszony System Kontroli Wersji)
-    * SHA-1    -> 
-    * Working Directory -> katalog roboczy
-    * Staging Area         -> poczekalnia
-    * Git Directory (Repository) -> repozytorium Git
-    * nieśledzone (untracked) ->
+    * VCS                           -> Version Control System (ang. System Kontroli Wersji)
+    * CVCS                          -> Centralized Version Control System (ang. Scentralizowany System Kontroli Wersji)
+    * DVCS                          -> Distributed Version Control System (ang. Rozproszony System Kontroli Wersji)
+    * SHA-1                         -> 
+    * Working Directory             -> katalog roboczy
+    * Staging Area                  -> poczekalnia
+    * Git Directory (Repository)    -> repozytorium Git np. na GitHub
+    * nieśledzone (untracked)       ->
     * niezmodyfikowane (unmodified) ->
-    * zmodyfikowane (modified) ->
-    * oczekujące (staged) ->
+    * zmodyfikowane (modified)      ->
+    * oczekujące (staged)           ->
 
 1. Co to jest Git? Różnica między Git'em, a GitHub'em.
 
@@ -83,15 +84,32 @@
     (*) Aby dodać nowy lub zmodyfikowany plik do 'Staging Area' wykorzystujemy to samo polecenie: git add <file_name>
 
 7. Polecenia
-    * git init                  - inicjalizacja repozytorium / stworzenie pliku .git
-    * git add <file_name>       -
-    * git status                -
-    * git diff                  -
-    * git diff --cached         -
-    * git diff --staged         -
-    * git commit -m "comment"   - dodanie pilku do Staging Area (HEAD) z komentarzem zmiany
-                 -v             - do komentarza dodawane są zmodyfikowane wiersze
-                 -a             - dodanie plików z pominięciem komendy 'git add <file_name>'
+    * git init                      - inicjalizacja repozytorium / stworzenie pliku .git
+    * git add <file_name>           -
+    * git status                    -
+    * git diff                      -
+    * git diff --cached             -
+    * git diff --staged             -
+    * git commit -m "comment"       - dodanie pilku do Staging Area (HEAD) z komentarzem zmiany
+                 -v                 - do komentarza dodawane są zmodyfikowane wiersze
+                 -a                 - dodanie plików z pominięciem komendy 'git add <file_name>'
+                 --amend            -
+
+    * git rm <file_name>            - usunięcie pliku ze zbioru plików śledzonych i FIZYCZNE
+    * git mv <source> <destination> - zmiana nazwy pliku w repozytorium
+    * git log                       - historia git push z zewnętrznym repo (GitHub)
+              -p                    - pokazuje dodatkowo różnicę pomiędzy commit'ami
+              -'n'                  - ogranicza listę do n ostatnich wpisów, gdzie n - unsigned int
+              --stat                - skrócone statystyki każdej ze zmian
+              --pretty=oneline      -
+    * git reset HEAD <file_name>    -
+    * git checkout -- <file_name>   -
+    * git clone <remote_repo>       -
+    * git remote -v                 -
+                 add <repo_name> <remote_repo>  -
+    * git fetch <remote_repo>       - uspójnienie zmian z zewnętrznym repo
 
 n. Bibliografia
     * https://git-scm.com/book/pl/
+    * https://www.codecademy.com/learn/learn-git
+    * https://www.codeschool.com/courses/try-git
