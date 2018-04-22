@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 tekst Dopisuje coœ
+=======
+tekst
+drugi tekst
+>>>>>>> 8ef162c48a5e88a60823632aa58cbc944aa2d4c4
