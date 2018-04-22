@@ -1,93 +1,97 @@
 /**
 -///--- --- --- --- --- ---///-
-		Git for Dummies
-		for Protected Static Void
-		by Szymon
-		19.04.2018
-		version 1.0
+        Git for Dummies
+        for Protected Static Void
+        by Szymon & Adam
+        22.04.2018
+        version 1.0
 -///--- --- --- --- --- ---///-
 
  */
 0. Słownik pojęć
-	* VCS	-> Version Control System (ang. System Kontroli Wersji)
-	* CVCS	-> Centralized Version Control System (ang. Scentralizowany System Kontroli Wersji)
-	* DVCS	-> Distributed Version Control System (ang. Rozproszony System Kontroli Wersji)
-	* SHA-1	-> 
-	* Working Directory -> katalog roboczy
-	* Staging Area 		-> przechowywalnia
-	* Git Directory (Repository) -> repozytorium Git
-	* nieśledzone (untracked) ->
-	* niezmodyfikowane (unmodified) ->
-	* zmodyfikowane (modified) ->
-	* oczekujące (staged) ->
+    * VCS    -> Version Control System (ang. System Kontroli Wersji)
+    * CVCS    -> Centralized Version Control System (ang. Scentralizowany System Kontroli Wersji)
+    * DVCS    -> Distributed Version Control System (ang. Rozproszony System Kontroli Wersji)
+    * SHA-1    -> 
+    * Working Directory -> katalog roboczy
+    * Staging Area         -> poczekalnia
+    * Git Directory (Repository) -> repozytorium Git
+    * nieśledzone (untracked) ->
+    * niezmodyfikowane (unmodified) ->
+    * zmodyfikowane (modified) ->
+    * oczekujące (staged) ->
 
-1. Co to jest Git?
+1. Co to jest Git? Różnica między Git'em, a GitHub'em.
+
+
 
 2. Stany plików w repozytorium Git
-	* zatwierdzony	- bezpieczne zachowanie zmian w lokalnej bazie danych
-	* zmodyfikowany - plik został zmieniony, ale zmiany nie zostały wprowadzone do bazy danych
-	* śledzony - zmodyfikowany plik został przeznaczony do instrukcji commit
+    * zatwierdzony    - bezpieczne zachowanie zmian w lokalnej bazie danych
+    * zmodyfikowany - plik został zmieniony, ale zmiany nie zostały wprowadzone do bazy danych
+    * śledzony - zmodyfikowany plik został przeznaczony do instrukcji commit
 
-	 ---------------			 ---------------			 ---------------
-	| Working		|			| Staging		|			| Git 			|
-	| Directory 	|			| Area			|			| Repository	|
-	 ---------------			 ---------------			 ---------------
-			|							|							|
-			|							|							|
-			|<----------------checkout the project------------------|
-			|							|							|
-			|							|							|
-			|							|							|
-			|							|							|
-			|---------stage files------>|							|
-			|							|							|
-			|							|							|
-			|							|--------COMMIT------------>|
-			|							|							|
+    ----------------            ----------------             ---------------
+    | Working      |            | Staging      |             | Git         |
+    | Directory    |            | Area         |             | Repository  |
+    ----------------            ----------------             ---------------
+            |                            |                            |
+            |                            |                            |
+            |<--------------- checkout the project -------------------|
+            |                            |                            |
+            |                            |                            |
+            |                            |                            |
+            |                            |                            |
+            |-------- stage files ------>|                            |
+            |                            |                            |
+            |                            |                            |
+            |                            |------- COMMIT ------------>|
+            |                            |                            |
 
 3. Schemat pracy w Git
 
-	3.1. Modyfikacja plików w katalogu roboczym.
-	3.2. Oznaczenie zmodyfikowanych pliki jako śledzone, dodając ich bieżący stan do przechowalni.
-	3.3. Dokonanie zatwierdzenia (commit), podczas którego zawartość plików z przechowalni zapisywana jest do projektu w Git Repository.
+    3.1. Modyfikacja plików w katalogu roboczym.
+    3.2. Oznaczenie zmodyfikowanych pliki jako śledzone, dodając ich bieżący stan do przechowalni.
+    3.3. Dokonanie zatwierdzenia (commit), podczas którego zawartość plików z przechowalni zapisywana jest do projektu w Git Repository.
 
 4. Instrukcja instalacji: https://gitforwindows.org
 
 5. Konfiguracja Git
-	* git config user.name "#"
-	* git config user.email #
-	* git config color.* auto
+    * git config user.name "#"
+    * git config user.email #
+    * git config color.* auto
 
 6. Status plików w repozytorium (lokalnym)
 
-	 ---------------			 -------------------			 ---------------			 ---------------	
-	| nieśledzone	|			| niezmodyfikowane 	|			| zmodyfikowane	|			| oczekujące	|
-	 ---------------			 -------------------			 ---------------			 ---------------
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
-	 		|							  |								|							|
+     ---------------             --------------------            -----------------            ---------------
+     | Working     |             | Staging          |            | Working       |            | Staging     |
+     | Directory   |             | Area             |            | Directory     |            | Area / HEAD |
+     ---------------             --------------------            -----------------            ---------------    
+     | nieśledzone |             | niezmodyfikowane |            | zmodyfikowane |            | oczekujące  |
+     ---------------             --------------------            -----------------            ---------------
+            |                             |                              |                            |
+            |                             |------ modyfikacja pliku ---->|                            |
+            |                             |                              |                            |
+            |--- dodanie nowego pliku --->|                              |                            |
+            |                             |                              |-- dodanie do poczekalni -->|
+            |                             |                              |                            |
+            |<-- usunięcie pliku ---------|                              |                            |
+            |                             |                              |                            |
+            |                             |<------------------- wykonanie COMMIT ---------------------|
+            |                             |                              |                            |
+            |                             |                              |                            |
 
+    (*) Aby dodać nowy lub zmodyfikowany plik do 'Staging Area' wykorzystujemy to samo polecenie: git add <file_name>
 
-
-
-
-
-
-
-
-
-. Polecenia
-	* git init		- inicjalizacja repozytorium / stworzenie pliku .git
-	* 
+7. Polecenia
+    * git init                  - inicjalizacja repozytorium / stworzenie pliku .git
+    * git add <file_name>       -
+    * git status                -
+    * git diff                  -
+    * git diff --cached         -
+    * git diff --staged         -
+    * git commit -m "comment"   - dodanie pilku do Staging Area (HEAD) z komentarzem zmiany
+                 -v             - do komentarza dodawane są zmodyfikowane wiersze
+                 -a             - dodanie plików z pominięciem komendy 'git add <file_name>'
 
 n. Bibliografia
-	* https://git-scm.com/book/pl/
+    * https://git-scm.com/book/pl/
