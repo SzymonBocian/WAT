@@ -1,0 +1,6 @@
+Lista zagadnień dla Protected Static Void:
+
+1. Connector z db z wykorzystaniem Javy - Kuba K. & Maciek W.
+2. Web Service w C#
+3. Gra Mikołaja 'Minecraft 2D' - omówienie - biblioteka graficzna
+4. 
