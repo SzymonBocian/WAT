@@ -1,2 +1,11 @@
+<<<<<<< HEAD
+tekst
+LINIA2
+=======
+<<<<<<< HEAD
+tekst Dopisuje coœ
+=======
 tekst
 drugi tekst
+>>>>>>> 8ef162c48a5e88a60823632aa58cbc944aa2d4c4
+>>>>>>> 4765f4ef9e1f577a58279b9cd626041f0cfa6803
