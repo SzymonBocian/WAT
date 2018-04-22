@@ -1,0 +1,8 @@
+# lista plików nieśledzonych przez Git'a
+
+# lokalne logi - mają byc niedodawane do repo na GitHub
+*.log
+# sam plik .gitignore też ma nie być śledzony
+# .gitignore
+#skrypty bash'owe
+*.bash
