@@ -1,5 +1,10 @@
 ﻿Lista obecności:
 
 1. Szymon Bocian
+6. Maciej Wierzbicki
 7. Mikołaj Bednarek
+<<<<<<< HEAD
 10.Michal Grzybowski
+=======
+14. Adam Kochański
+>>>>>>> 7e67ca279a62cf002afe3a0ef74978721bd4cd7b
