@@ -7,11 +7,10 @@
 // Ogólnie nie czytałem tych rozdziałów więc nie wiem czy wszystko nadaje się na przedstawienie tego
 
 4. Rozdział 9. Komponenty Swing interfejsu użytkownika -	 Maciej Wierzbicki 
-5. Rozdział 10. Przygotowywanie apletów i aplikacji do użytku -
-6. Rozdział 11. Wyjątki, dzienniki, asercje i debugowanie - 
-7. Rozdział 12. Programowanie uogólnione   - 
-8. Rozdział 13. Kolekcje - 
-9. Rozdział 14. Wielowątkowość - 
+6. Rozdział 11. Wyjątki, dzienniki, asercje i debugowanie - Adam	
+7. Rozdział 12. Programowanie uogólnione   - Grzegorz
+8. Rozdział 13. Kolekcje - Maciek
+9. Rozdział 14. Wielowątkowość - Kuba
 .
 .
 .
