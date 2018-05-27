@@ -3,14 +3,12 @@
 1. Connector z db z wykorzystaniem Javy - Kuba K. & Maciek W.
 2. Web Service w C#
 3. Gra Mikołaja 'Minecraft 2D' - omówienie - biblioteka graficzna
-
-// Ogólnie nie czytałem tych rozdziałów więc nie wiem czy wszystko nadaje się na przedstawienie tego
-
-4. Rozdział 9. Komponenty Swing interfejsu użytkownika -	 Maciej Wierzbicki 
-6. Rozdział 11. Wyjątki, dzienniki, asercje i debugowanie - Adam	
-7. Rozdział 12. Programowanie uogólnione   - Grzegorz
-8. Rozdział 13. Kolekcje - Maciek
-9. Rozdział 14. Wielowątkowość - Kuba
+-----------------------------------------------------------------------
+4 - 9 Ksiażka JAVA Podstawy - Maciek, Adam, Maciek, Kuba
+-----------------------------------------------------------------------
+10. Przygotowanie do zaliczenia z JTP - 
+11. Wzorce projektowe - 
+12. Spring - 
 .
 .
 .
